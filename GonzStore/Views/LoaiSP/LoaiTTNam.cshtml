@@ -1,0 +1,10 @@
+﻿@model IEnumerable<GonzStore.Entities.LoaiSP>
+
+@{
+    ViewData["Title"] = "LoaiTTNam";
+    Layout = null;
+}
+@foreach (var item in Model)
+{
+    <a href="/SanPham/LoaiSP/@item.idLoaiSP" class="dropdown-item">@Html.DisplayFor(modelItem => item.tenLoaiSP)</a>
+}

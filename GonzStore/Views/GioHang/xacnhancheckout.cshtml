@@ -1,0 +1,19 @@
+﻿@{ 
+    Layout = "_FrontEnd";
+ }
+<h2 style="text-align:center">@ViewBag.mess</h2>
+
+<script>
+    $(document).ready(function () {
+
+        $.ajax({
+            url: "/sendmail/donhangthanhcong/",
+            data: {
+                id: "@ViewBag.iddh",
+       
+                emails: "@ViewBag.emails",
+            },
+            type:"POST",
+        });
+    });
+</script>
